@@ -18,7 +18,23 @@ public class Calcul{
                 c[i][j]=a[i][j]+b[i][j];
             }
         }
+    } 
+    float[][] sum2(float[][] a, float[][]b){
+        float [][] c=new float[a.length][a.length];
+        if(a.length!=b.length || a.length==0) return null;
+        sum1(c,a,b);
+        return c;
     }
+    /*float[][] sum3(float[][] a, float[][]b){
+        float [][] c=new float[a.length][a.length];
+        if(a.length!=b.length || a.length==0) return null;
+        for(int i=0; i<a.length;i++){
+           for(int j=0;j<b.length;j++){
+               c[i][j]=a[i][j]+b[i][j]; 
+           } 
+        }
+        return c;
+    }*/
     public static void main(String[]args){
         float[][] c = new float[2][3];  // Matrice résultat, initialisée à 0
         int[] tab = {3, 7, 8, 9, 10, 1};  // OK pour inverse (1D int[])
